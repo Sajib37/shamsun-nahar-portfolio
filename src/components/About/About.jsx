@@ -177,7 +177,7 @@ function About() {
                     <div className="h-1 w-[80%] mx-auto bg-gradient-to-r from-blue-500 to-purple-500 neon-glow"></div>
                 </div>
 
-                <section className="lg:w-[80%] mx-auto mt-16 lg:mt-20 flex-col md:flex-row flex gap-4 lg:gap-10 items-center">
+                <section className="lg:w-[80%] mx-auto mt-16 lg:mt-20 flex-col md:flex-row flex gap-8 md:gap-12 lg:gap-10 items-center">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -264,16 +264,16 @@ function About() {
 
                         <div className="flex justify-center my-4 lg:py-6 ">
                             <div className="flex  items-center mt-8">
-                                <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-                                <span className="bg-[#1a1443] w-fit text-white p-2  md:text-2xl rounded-md">
+                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
+                                <span className="bg-[#1a1443] w-fit text-white p-2   md:text-2xl rounded-md">
                                     My Learning Path
                                 </span>
-                                <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
                             </div>
                         </div>
 
                         <div className="py-2 md:py-6">
-                            <div className=" flex flex-col md:flex-row gap-6 lg:gap-12">
+                            <div className=" flex flex-col md:flex-col-reverse lg:flex-row gap-6 lg:gap-12">
                                 <div className="flex justify-center items-start">
                                     <motion.div
                                         initial={{ opacity: 0, y: 40 }}
@@ -363,25 +363,25 @@ function About() {
                             />
                         </div>
 
-                        <div className="flex justify-center my-2 lg:my-4 ">
-                            <div className="flex  items-center mt-4">
-                                <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+                        <div className="flex justify-center my-12 lg:py-8 ">
+                            <div className="flex  items-center mt-8">
+                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
                                 <span className="bg-[#1a1443] w-fit text-white p-2  md:text-2xl rounded-md">
                                     Skillset Overview
                                 </span>
-                                <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
                             </div>
                         </div>
 
                         {/* Skills categories */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 items-center py-16">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 items-center ">
                             {skillCategories.map((category, categoryIndex) => {
                                 const IconComponent = category.icon;
                                 return (
                                     <div key={category.id} className="flex justify-center items-center flex-1 w-full">
                                         <motion.div
                                         
-                                        className={`glass-effect ${category.hover} rounded-2xl p-6 border ${category.borderColor} ${category.bgColor} min-h-[450px] w-full self-start`}
+                                        className={`glass-effect ${category.hover} rounded-2xl p-6 border ${category.borderColor} ${category.bgColor}  lg:min-h-[450px] w-full self-start`}
                                         initial={{ opacity: 0, y: 30 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{

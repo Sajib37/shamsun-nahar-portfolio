@@ -108,9 +108,9 @@ function Home() {
                         <TypeWriter
                             texts={[
                                 "Business Graduate",
-                                "Management Professional",
-                                "Leadership Enthusiast",
-                                "HR & IT Professional",
+                                "Analytics Student",
+                                "SAP Learner",
+                                "BI Enthusiast",
                             ]}
                             delay={isMobile ? 100 : 80}
                             deleteDelay={isMobile ? 50 : 30}
