@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import TypeWriter from "./TypeWriter";
-import { FaArrowRight, FaFacebook, FaLinkedin } from "react-icons/fa";
+import {
+    FaArrowRight,
+    FaFacebook,
+    FaLinkedin,
+    FaDownload,
+} from "react-icons/fa";
 
 let HeroModel = null;
 let gsap = null;
@@ -67,10 +72,8 @@ function Home() {
         }
     }, [animationsEnabled]);
 
-
-
     return (
-        <section className="section-padding pt-32 pb-20">
+        <section className="section-padding pt-32 pb-4">
             <div
                 className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                 ref={contentRef}
@@ -97,9 +100,6 @@ function Home() {
                                 <span className="inline-block gradient-text">
                                     Nahar
                                 </span>
-                                {!isMobile && (
-                                    <span className="absolute -inset-2 bg-white/3 blur-2xl rounded-2xl -z-10"></span>
-                                )}
                             </span>
                         </h1>
                     </div>
@@ -137,22 +137,11 @@ function Home() {
                     </p>
 
                     <div className="hero-element flex flex-wrap gap-2">
-                        <button
-                            onClick={() => {
-                                const element =
-                                    document.getElementById("projects");
-                                if (element) {
-                                    const offsetTop = element.offsetTop - 80;
-                                    window.scrollTo({
-                                        top: offsetTop,
-                                        behavior: "smooth",
-                                    });
-                                }
-                            }}
-                            className="bg-gradient-to-r from-blue-500 to-purple-500 flex items-center gap-1 rounded-full px-2 md:px-4 hover:scale-95 transition-transform duration-2000 hover:shadow-lg hover:shadow-blue-500/30 text-white py-2 text-sm md:text-base font-semibold"
-                        >
-                           Download Resume <FaArrowRight />
-                        </button>
+                        <a href="/resume.pdf" download>
+                            <button className="cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 flex items-center gap-1 rounded-full px-2 md:px-4 hover:scale-95 transition-transform duration-2000 hover:shadow-lg hover:shadow-blue-500/30 text-white py-2 text-sm md:text-base font-semibold">
+                                Download Resume <FaDownload />
+                            </button>
+                        </a>
 
                         <div className="flex items-center gap-2">
                             <a
@@ -184,7 +173,6 @@ function Home() {
                         </div>
                     </div>
                 </div>
-
 
                 <div className="hero-element hidden lg:block relative">
                     {show3D && HeroModel ? (

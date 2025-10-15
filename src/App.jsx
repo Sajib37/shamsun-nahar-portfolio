@@ -103,11 +103,11 @@ function App() {
                         </MobileSafeSection>
 
                         {/* About section - lazy load with intersection observer */}
-                        {/* <MobileSafeSection id="about" fallback={<FastFallback message="Loading about..." />}>
+                        <MobileSafeSection id="about" fallback={<FastFallback message="Loading about..." />}>
                           <Suspense fallback={<FastFallback message="Loading about..." />}>
                             <About />
                           </Suspense>
-                        </MobileSafeSection> */}
+                        </MobileSafeSection>
 
                         {/* Projects section */}
                         {/* <MobileSafeSection id="projects" fallback={<FastFallback message="Loading projects..." />}>
