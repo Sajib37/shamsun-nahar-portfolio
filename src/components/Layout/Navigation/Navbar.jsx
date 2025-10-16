@@ -32,9 +32,8 @@ function Navbar() {
       const sections = [
         "home",
         "about",
-        "projects",
-        "tech-stack",
-        "resume",
+        "works",
+        "achievements",
         "contact",
       ];
       const sectionElements = sections.map((id) => document.getElementById(id));
@@ -202,10 +201,10 @@ function Navbar() {
               onClick={() => scrollToSection("about")}
             />
             <NavLink
-              sectionId="work"
-              active={activeSection === "work"}
-              label="Work"
-              onClick={() => scrollToSection("work")}
+              sectionId="works"
+              active={activeSection === "works"}
+              label="Works"
+              onClick={() => scrollToSection("works")}
             />
             <NavLink
               sectionId="achievements"
@@ -311,11 +310,11 @@ function Navbar() {
             active={activeSection === "about"}
           />
           <MobileNavLink
-            sectionId="work"
+            sectionId="works"
             icon={<FaLaptopCode />}
-            label="Work"
-            onClick={() => handleMobileNavClick("work")}
-            active={activeSection === "work"}
+            label="Works"
+            onClick={() => handleMobileNavClick("works")}
+            active={activeSection === "works"}
           />
           <MobileNavLink
             sectionId="achievements"
@@ -347,14 +346,14 @@ function NavLink({ label, active, onClick }) {
         active
           ? "text-blue-400 bg-blue-500/10"
           : "text-slate-300 hover:text-blue-400 hover:bg-slate-800/50"
-      }`}
+        }`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       {label}
       {active && (
         <motion.div
-          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-400 rounded-full"
+          className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-4 h-1 bg-blue-400 rounded-full"
           layoutId="navbar-indicator"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}

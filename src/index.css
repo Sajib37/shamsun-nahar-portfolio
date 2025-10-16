@@ -119,7 +119,7 @@ body {
   }
 
   .neon-glow {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.7), 0 0 40px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3), 0 0 7px rgba(59, 130, 246, 0.3);
   }
 
   /* Shimmer animation for skeletons */
@@ -362,4 +362,11 @@ body {
   filter: brightness(1.5);
   mask-clip: padding-box, border-box;
   mask-composite: intersect;
+}
+
+
+
+.pic-holder:hover .pic-effect {
+  transform: translate(6px, 6px);
+  transition: transform 0.9s ease;
 }

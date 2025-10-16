@@ -12,10 +12,12 @@ import MobileSafeSection from './components/Layout/Mobile/MobileSafeSection'
 
 // Only Home loaded immediately for faster initial render
 import Home from './components/Home/Home'
+import Projects from './components/Projects/Projects'
 
 // Lazy load everything else
 const About = lazy(() => import('./components/About/About'))
-const Projects = lazy(() => import('./components/Projects/Projects'))
+const Works = lazy(() => import('./components/Works/Works'))
+const Achievement = lazy(() => import('./components/Achievement/Achievement'))
 const Resume = lazy(() => import('./components/Resume/Resume'))
 const TechStack = lazy(() => import('./components/TechStack/TechStack'))
 const Contact = lazy(() => import('./components/Contact/Contact'))
@@ -109,12 +111,19 @@ function App() {
                           </Suspense>
                         </MobileSafeSection>
 
-                        {/* Projects section */}
-                        {/* <MobileSafeSection id="projects" fallback={<FastFallback message="Loading projects..." />}>
-                          <Suspense fallback={<FastFallback message="Loading projects..." />}>
-                            <Projects />
+                        {/* works section */}
+                        <MobileSafeSection id="works" fallback={<FastFallback message="Loading works..." />}>
+                          <Suspense fallback={<FastFallback message="Loading works..." />}>
+                            <Works />
                           </Suspense>
-                        </MobileSafeSection> */}
+                          </MobileSafeSection>
+
+                        {/* achievement section */}
+                        <MobileSafeSection id="achievements" fallback={<FastFallback message="Loading achievement..." />}>
+                          <Suspense fallback={<FastFallback message="Loading achievement..." />}>
+                            <Achievement />
+                          </Suspense>
+                        </MobileSafeSection>
 
                         {/* Tech Stack section */}
                         {/* <MobileSafeSection id="tech-stack" fallback={<FastFallback message="Loading tech stack..." />}>

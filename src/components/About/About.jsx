@@ -67,7 +67,7 @@ function About() {
             icon: FaUsers,
             color: "text-blue-400",
             bgColor: "bg-blue-500/10",
-            hover: "hover:bg-blue-500/15",  
+            hover: "hover:bg-blue-500/15",
             borderColor: "border-blue-500/20",
             technologies: [
                 {
@@ -167,93 +167,78 @@ function About() {
     };
 
     return (
-        <section className="section-padding py-12 md:py-16 lg:py-24">
+        <section className="section-padding pt-12 md:pt-16">
             <div className="max-w-7xl mx-auto ">
-                {/*title of about */}
-                <div className="flex flex-col items-center w-fit mx-auto">
-                    <h2 className="section-title text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
-                        Discover My World
-                    </h2>
-                    <div className="h-1 w-[80%] mx-auto bg-gradient-to-r from-blue-500 to-purple-500 neon-glow"></div>
+                <div className="lg:w-[85%] mx-auto flex gap-1 items-center">
+                    <h1 className="section-title text-xl md:text-3xl font-bold mb-2 text-slate-300">
+                        <span className="text-emerald-400">#</span>About Me
+                    </h1>
+                    <div className="h-1 w-20 md:w-48 lg:w-64 bg-blue-400/50"></div>
                 </div>
 
-                <section className="lg:w-[80%] mx-auto mt-16 lg:mt-20 flex-col md:flex-row flex gap-8 md:gap-12 lg:gap-10 items-center">
+                <section className="lg:w-[85%] mx-auto mt-6 md:mt-8 lg:mt-10 flex-col lg:flex-row-reverse flex gap-8 md:gap-12 lg:gap-20 items-start">
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
-                        className="flex-1 relative"
+                        className="flex-1 w-[80%] mx-auto relative bg-slate-200 pic-holder"
                     >
                         <img
-                            src="/profile2.jpg"
+                            src="/profile3.png"
                             alt="Profile"
-                            className="w-10/12 object-cover mx-auto "
+                            className="object-cover w-full h-full mx-auto "
                         />
+
+                        <div className="absolute top-0 w-full h-full -z-10 border-4 border-emerald-400 translate-x-3 translate-y-3 pic-effect"></div>
                     </motion.div>
-                    <div className="flex-1 space-y-4 lg:space-y-6 ">
+                    <div className="flex-1 lg:flex-2 space-y-3 lg:space-y-4 ">
                         <motion.p
                             initial={{ opacity: 0, y: -20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
-                            className=" leading-relaxed text-slate-300 md:text-lg"
+                            className="  text-slate-300 md:text-lg"
                         >
-                            I’m{" "}
-                            <span className="text-emerald-400  font-semibold">
-                                Shamsun Nahar
-                            </span>
-                            , a business graduate passionate about bridging{" "}
-                            <span className="text-violet-400 font-semibold">
-                                {" "}
-                                Business and IT
-                            </span>
-                            . I hold an MBA from the{" "}
-                            <span className="text-blue-400 font-semibold">
-                                University of Dhaka
-                            </span>{" "}
-                            and am pursuing a Master’s in MIS at{" "}
-                            <span className="text-emerald-400 font-semibold">
-                                Lamar University
-                            </span>
-                            .
+                            I’m a passionate learner who believes in dreaming
+                            big and turning those <span className="text-emerald-400 font-semibold">dreams into action</span>. I
+                            completed my BBA in Management and MBA in Strategic
+                            and International Management from the <span className="text-emerald-400 font-semibold">University of
+                            Dhaka</span>, one of Bangladesh’s top-ranked universities,
+                            where the Department of Management is globally
+                            recognized in the QS World Rankings (351–400 range).
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: -20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
-                            className=" leading-relaxed text-slate-300 md:text-lg"
+                            className="  text-slate-300  md:text-lg"
                         >
-                            I have experience in{" "}
-                            <span className="text-violet-400 font-semibold">
-                                HR, recruitment
-                            </span>
-                            , and{" "}
-                            <span className="text-emerald-400 font-semibold">
-                                data analysis
-                            </span>
-                            , and am skilled in MS Excel, Google Sheets,
-                            PowerPoint, and data analytics.
+                            Currently, I’m pursuing my Master’s in Management
+                            Information Systems at <span className="text-emerald-400 font-semibold">Lamar University, USA</span>,
+                            with a scholarship. My transition from business to
+                            technology reflects my belief that the future
+                            belongs to those who can connect <span className="text-emerald-400 font-semibold">ideas, data, and
+                            people</span>.
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7 }}
-                            className=" leading-relaxed text-slate-300 md:text-lg"
+                            className="  text-slate-300 md:text-lg"
                         >
-                            I’ve also led initiatives as{" "}
-                            <span className="text-blue-400 font-semibold">
-                                Vice President
-                            </span>{" "}
-                            of DU Writers’ Hub and Communication Associate at
-                            Youth for Change BD. Driven and adaptable, I aim to
-                            grow in roles that merge business strategy and
-                            technology to create impact.
+                            Through my experience as an HR Intern at Panjeree
+                            Publications Limited and leadership roles in DU
+                            Writers’ Hub and Youth for Change BD, I’ve developed
+                            strong <span className="text-emerald-400 font-semibold">analytical, communication, and teamwork
+                            skills</span>. I aspire to grow as a skilled and empathetic
+                            professional who not only achieves success but helps
+                            others move forward.
                         </motion.p>
                     </div>
                 </section>
 
                 {/* Education section */}
                 <section className="relative">
-                    <div id="education" className="relative mt-16 lg:mt-20 ">
+                    <div className="relative mt-4 md:mt-8 lg:mt-10">
                         <div className="absolute w-full h-full top-0 -z-10 opacity-30">
                             <img
                                 src="/sectionBG.svg"
@@ -262,17 +247,17 @@ function About() {
                             />
                         </div>
 
-                        <div className="flex justify-center my-4 lg:py-6 ">
-                            <div className="flex  items-center mt-8">
-                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
-                                <span className="bg-[#1a1443] w-fit text-white p-2   md:text-2xl rounded-md">
+                        <div className="flex  ">
+                            <div className="flex  items-center mt-8 md:mt-10 lg:mt-10">
+                                
+                                <span className="bg-[#231a5e] w-fit text-white p-2   md:text-2xl rounded-md">
                                     My Learning Path
                                 </span>
-                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
+                                <span className="w-20 md:w-48 h-[2px] bg-[#231a5e]"></span>
                             </div>
                         </div>
 
-                        <div className="py-2 md:py-6">
+                        <div className="pt-6 md:pt-10">
                             <div className=" flex flex-col md:flex-col-reverse lg:flex-row gap-6 lg:gap-12">
                                 <div className="flex justify-center items-start">
                                     <motion.div
@@ -291,7 +276,7 @@ function About() {
                                 </div>
 
                                 <div>
-                                    <div className="flex flex-col gap-6">
+                                    <div className="flex flex-col gap-6 md:px-10">
                                         {educations.map((education) => (
                                             <motion.div
                                                 initial={{ opacity: 0, y: 40 }}
@@ -315,6 +300,7 @@ function About() {
                                                             alt="Hero"
                                                             className="absolute w-full h-1/2 bottom-0"
                                                         />
+                                                        <div className="absolute top-[50%] -translate-y-[50%] left-0 -translate-x-[50%] w-3 h-3 rounded-full bg-violet-400"></div>
                                                         <div className="flex justify-center">
                                                             <p className="text-xs sm:text-sm text-[#16f2b3]">
                                                                 {
@@ -329,7 +315,7 @@ function About() {
                                                                 />
                                                             </div>
                                                             <div>
-                                                                <p className="text-base sm:text-xl mb-2 font-medium uppercase">
+                                                                <p className="text-sm sm:text-xl mb-2 font-medium uppercase">
                                                                     {
                                                                         education.title
                                                                     }
@@ -354,7 +340,7 @@ function About() {
 
                 {/* Skills section */}
                 <section className="relative">
-                    <div id="education" className="relative mt-16 lg:mt-20 ">
+                    <div  className="relative   ">
                         <div className="absolute w-full h-1/2 bottom-0 -z-10 opacity-20">
                             <img
                                 src="/blur-23.svg"
@@ -363,103 +349,108 @@ function About() {
                             />
                         </div>
 
-                        <div className="flex justify-center my-12 lg:py-8 ">
-                            <div className="flex  items-center mt-8">
-                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
-                                <span className="bg-[#1a1443] w-fit text-white p-2  md:text-2xl rounded-md">
+                        <div className="flex  ">
+                            <div className="flex  items-center mt-12 md:mt-14 lg:mt-16">
+                                
+                                <span className="bg-[#231a5e] w-fit text-white p-2   md:text-2xl rounded-md">
                                     Skillset Overview
                                 </span>
-                                <span className="w-12 md:w-24 h-[2px] bg-[#1a1443]"></span>
+                                <span className="w-20 md:w-48 h-[2px] bg-[#231a5e]"></span>
                             </div>
                         </div>
 
                         {/* Skills categories */}
-                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 items-center ">
+                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 pt-6 items-center ">
                             {skillCategories.map((category, categoryIndex) => {
                                 const IconComponent = category.icon;
                                 return (
-                                    <div key={category.id} className="flex justify-center items-center flex-1 w-full">
-                                        <motion.div
-                                        
-                                        className={`glass-effect ${category.hover} rounded-2xl p-6 border ${category.borderColor} ${category.bgColor}  lg:min-h-[450px] w-full self-start`}
-                                        initial={{ opacity: 0, y: 30 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        transition={{
-                                            delay: categoryIndex * 0.1,
-                                        }}
-                                        whileHover={{
-                                            scale: 1.02,
-                                            transition: { duration: 0.4 },
-                                        }}
+                                    <div
+                                        key={category.id}
+                                        className="flex justify-center items-center flex-1 w-full"
                                     >
-                                        <div className="flex items-center gap-3 mb-6">
-                                            <div
-                                                className={`w-12 h-12 ${category.bgColor} rounded-xl flex items-center justify-center`}
-                                            >
-                                                <IconComponent
-                                                    className={`w-6 h-6 ${category.color}`}
-                                                />
+                                        <motion.div
+                                            className={`glass-effect ${category.hover} rounded-2xl p-6 border ${category.borderColor} ${category.bgColor}  lg:min-h-[450px] w-full self-start`}
+                                            initial={{ opacity: 0, y: 30 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            transition={{
+                                                delay: categoryIndex * 0.1,
+                                            }}
+                                            whileHover={{
+                                                scale: 1.02,
+                                                transition: { duration: 0.4 },
+                                            }}
+                                        >
+                                            <div className="flex items-center gap-3 mb-6">
+                                                <div
+                                                    className={`w-12 h-12 ${category.bgColor} rounded-xl flex items-center justify-center`}
+                                                >
+                                                    <IconComponent
+                                                        className={`w-6 h-6 ${category.color}`}
+                                                    />
+                                                </div>
+                                                <h3 className="text-lg font-bold text-slate-100">
+                                                    {category.title}
+                                                </h3>
                                             </div>
-                                            <h3 className="text-lg font-bold text-slate-100">
-                                                {category.title}
-                                            </h3>
-                                        </div>
 
-                                        <div className="space-y-4">
-                                            {category.technologies.map(
-                                                (tech, techIndex) => {
-                                                    const TechIcon = tech.icon;
-                                                    return (
-                                                        <motion.div
-                                                            key={techIndex}
-                                                            className="flex items-center justify-between p-3 bg-slate-800/30 rounded-lg border border-slate-700/30"
-                                                            initial={{
-                                                                opacity: 0,
-                                                                x: -20,
-                                                            }}
-                                                            whileInView={{
-                                                                opacity: 1,
-                                                                x: 0,
-                                                            }}
-                                                            transition={{
-                                                                delay:
-                                                                    0.3 +
-                                                                    techIndex *
-                                                                        0.1,
-                                                            }}
-                                                            viewport={{
-                                                                once: true,
-                                                            }}
-                                                            whileHover={{
-                                                                x: 5,
-                                                                backgroundColor:
-                                                                    "rgba(51, 65, 85, 0.4)",
-                                                            }}
-                                                        >
-                                                            <div className="flex items-center gap-3">
-                                                                <TechIcon
-                                                                    className="w-5 h-5"
-                                                                    style={{
-                                                                        color: tech.color,
-                                                                    }}
-                                                                />
-                                                                <span className="font-medium text-slate-200">
-                                                                    {tech.name}
-                                                                </span>
-                                                            </div>
-                                                            <span
-                                                                className={`text-sm font-semibold ${getLevelColor(
-                                                                    tech.level
-                                                                )}`}
+                                            <div className="space-y-4">
+                                                {category.technologies.map(
+                                                    (tech, techIndex) => {
+                                                        const TechIcon =
+                                                            tech.icon;
+                                                        return (
+                                                            <motion.div
+                                                                key={techIndex}
+                                                                className="flex items-center justify-between p-3 bg-slate-800/30 rounded-lg border border-slate-700/30"
+                                                                initial={{
+                                                                    opacity: 0,
+                                                                    x: -20,
+                                                                }}
+                                                                whileInView={{
+                                                                    opacity: 1,
+                                                                    x: 0,
+                                                                }}
+                                                                transition={{
+                                                                    delay:
+                                                                        0.3 +
+                                                                        techIndex *
+                                                                            0.1,
+                                                                }}
+                                                                viewport={{
+                                                                    once: true,
+                                                                }}
+                                                                whileHover={{
+                                                                    x: 5,
+                                                                    backgroundColor:
+                                                                        "rgba(51, 65, 85, 0.4)",
+                                                                }}
                                                             >
-                                                                {tech.level}
-                                                            </span>
-                                                        </motion.div>
-                                                    );
-                                                }
-                                            )}
-                                        </div>
-                                    </motion.div>
+                                                                <div className="flex items-center gap-3">
+                                                                    <TechIcon
+                                                                        className="w-5 h-5"
+                                                                        style={{
+                                                                            color: tech.color,
+                                                                        }}
+                                                                    />
+                                                                    <span className="font-medium text-slate-200">
+                                                                        {
+                                                                            tech.name
+                                                                        }
+                                                                    </span>
+                                                                </div>
+                                                                <span
+                                                                    className={`text-sm font-semibold ${getLevelColor(
+                                                                        tech.level
+                                                                    )}`}
+                                                                >
+                                                                    {tech.level}
+                                                                </span>
+                                                            </motion.div>
+                                                        );
+                                                    }
+                                                )}
+                                            </div>
+                                        </motion.div>
                                     </div>
                                 );
                             })}
