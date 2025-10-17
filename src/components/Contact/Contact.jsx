@@ -104,7 +104,7 @@ const Contact = () => {
                 >
                     <FaRocket className="w-4 h-4 text-blue-400" />
                     <span className="text-sm font-medium text-gray-300">
-                        Let's Work Together
+                        Contact With Me
                     </span>
                 </motion.div>
                 {/* main content */}
