@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import TypeWriter from "./TypeWriter";
 import {
-    FaArrowRight,
     FaFacebook,
     FaLinkedin,
     FaDownload,

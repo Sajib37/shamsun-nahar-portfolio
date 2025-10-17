@@ -135,7 +135,7 @@ function App() {
                   </Routes>
                 </ErrorBoundary>
               </main>
-              {/* <Footer /> */}
+              <Footer />
             </>
           )}
           </div>

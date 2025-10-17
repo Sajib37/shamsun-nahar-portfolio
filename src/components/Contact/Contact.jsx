@@ -90,8 +90,9 @@ const Contact = () => {
             icon: FaMapMarkerAlt,
             label: "Location",
             value: "1135 Alabama Ave, Apt 31, Beaumont, TX 77705",
+            href:"https://maps.app.goo.gl/ZLn3fsRiW8gABJb86",
             color: "text-purple-400",
-        },
+        }
     ];
     return (
         <section className="section-padding pt-12  lg:pt-20">
@@ -237,8 +238,7 @@ const Contact = () => {
                                             transition={{ delay: 0.1 * index }}
                                             className="group"
                                         >
-                                            {info.href ? (
-                                                <a
+                                            <a
                                                     href={info.href}
                                                     className="flex items-center gap-2 md:gap-4 p-2 md:p-5 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10 group-hover:scale-[1.02]"
                                                 >
@@ -256,23 +256,6 @@ const Contact = () => {
                                                         </p>
                                                     </div>
                                                 </a>
-                                            ) : (
-                                                <div className="flex items-center gap-4 p-2 md:p-5 rounded-xl bg-white/5">
-                                                    <div
-                                                        className={`w-14 h-14 rounded-xl md:bg-white/10 flex items-center justify-center ${info.color}`}
-                                                    >
-                                                        <Icon className="w-5 h-5" />
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-sm text-gray-400 mb-1">
-                                                            {info.label}
-                                                        </p>
-                                                        <p className="text-white font-medium">
-                                                            {info.value}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            )}
                                         </motion.div>
                                     );
                                 })}
