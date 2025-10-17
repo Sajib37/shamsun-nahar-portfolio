@@ -1,20 +1,17 @@
 import { memo, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import emailjs from "emailjs-com";
 import {
     FaEnvelope,
     FaUser,
     FaPaperPlane,
     FaPhone,
     FaMapMarkerAlt,
-    FaGithub,
-    FaLinkedin,
     FaCheckCircle,
     FaTimes,
-    FaCode,
-    FaHeart,
-    FaStar,
     FaRocket,
 } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -23,19 +20,6 @@ const Contact = () => {
         email: "",
         message: "",
     });
-    const [toasts, setToasts] = useState([]);
-
-    const addToast = useCallback((type, message) => {
-        const id = Date.now();
-        setToasts((prev) => [...prev, { id, type, message }]);
-        setTimeout(() => {
-            setToasts((prev) => prev.filter((toast) => toast.id !== id));
-        }, 5000);
-    }, []);
-
-    const removeToast = useCallback((id) => {
-        setToasts((prev) => prev.filter((toast) => toast.id !== id));
-    }, []);
 
     const handleInputChange = useCallback((e) => {
         const { name, value } = e.target;
@@ -51,24 +35,34 @@ const Contact = () => {
                 !formData.email.trim() ||
                 !formData.message.trim()
             ) {
-                addToast("error", "Please fill in all fields");
                 return;
             }
 
             setIsSubmitting(true);
 
             try {
-                await new Promise((resolve) => setTimeout(resolve, 1000));
+                await emailjs.send(
+                    "service_ermp125", //service ID
+                    "template_6jmsuem", //template ID
+                    {
+                        from_name: formData.name,
+                        from_email: formData.email,
+                        message: formData.message,
+                    },
+                    "NyFYJGObUaA1UQvOZ" //public key
+                );
 
-                addToast("success", "Message sent successfully!");
-                setFormData({ name: "", email: "", subject: "", message: "" });
+                toast.success("Message sent successfully!!!", {
+                    duration: 2000,
+                });
+                setFormData({ name: "", email: "", message: "" });
             } catch {
-                addToast("error", "Failed to send message!");
+                toast.error("Failed to send message!", { duration: 2000 });
             } finally {
                 setIsSubmitting(false);
             }
         },
-        [formData, addToast]
+        [formData]
     );
 
     const contactInfo = [
@@ -90,9 +84,9 @@ const Contact = () => {
             icon: FaMapMarkerAlt,
             label: "Location",
             value: "1135 Alabama Ave, Apt 31, Beaumont, TX 77705",
-            href:"https://maps.app.goo.gl/ZLn3fsRiW8gABJb86",
+            href: "https://maps.app.goo.gl/ZLn3fsRiW8gABJb86",
             color: "text-purple-400",
-        }
+        },
     ];
     return (
         <section className="section-padding pt-12  lg:pt-20">
@@ -239,23 +233,23 @@ const Contact = () => {
                                             className="group"
                                         >
                                             <a
-                                                    href={info.href}
-                                                    className="flex items-center gap-2 md:gap-4 p-2 md:p-5 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10 group-hover:scale-[1.02]"
+                                                href={info.href}
+                                                className="flex items-center gap-2 md:gap-4 p-2 md:p-5 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-transparent hover:border-white/10 group-hover:scale-[1.02]"
+                                            >
+                                                <div
+                                                    className={`w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center ${info.color}`}
                                                 >
-                                                    <div
-                                                        className={`w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center ${info.color}`}
-                                                    >
-                                                        <Icon className="w-5 h-5" />
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-sm text-gray-400 mb-1">
-                                                            {info.label}
-                                                        </p>
-                                                        <p className="text-white font-medium">
-                                                            {info.value}
-                                                        </p>
-                                                    </div>
-                                                </a>
+                                                    <Icon className="w-5 h-5" />
+                                                </div>
+                                                <div>
+                                                    <p className="text-sm text-gray-400 mb-1">
+                                                        {info.label}
+                                                    </p>
+                                                    <p className="text-white font-medium">
+                                                        {info.value}
+                                                    </p>
+                                                </div>
+                                            </a>
                                         </motion.div>
                                     );
                                 })}
@@ -266,43 +260,7 @@ const Contact = () => {
             </div>
 
             {/* toast on the Top */}
-
-            <AnimatePresence>
-                {toasts.map((toast) => (
-                    <motion.div
-                        key={toast.id}
-                        initial={{ opacity: 0, x: 300 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: 300 }}
-                        className="fixed top-6 right-6 z-50"
-                    >
-                        <div
-                            className={`px-6 py-4 rounded-xl shadow-2xl border flex items-center gap-3 min-w-[320px] backdrop-blur-lg ${
-                                toast.type === "success"
-                                    ? "bg-green-500/70 border-green-400 text-white"
-                                    : "bg-red-500/70 border-red-400 text-white"
-                            }`}
-                        >
-                            <div className="flex-shrink-0">
-                                {toast.type === "success" ? (
-                                    <FaCheckCircle className="w-5 h-5" />
-                                ) : (
-                                    <FaTimes className="w-5 h-5" />
-                                )}
-                            </div>
-                            <p className="flex-1 text-sm font-medium">
-                                {toast.message}
-                            </p>
-                            <button
-                                onClick={() => removeToast(toast.id)}
-                                className="flex-shrink-0 hover:opacity-70 transition-opacity"
-                            >
-                                <FaTimes className="w-4 h-4" />
-                            </button>
-                        </div>
-                    </motion.div>
-                ))}
-            </AnimatePresence>
+            <Toaster position="top-right" reverseOrder={false} />
         </section>
     );
 };
