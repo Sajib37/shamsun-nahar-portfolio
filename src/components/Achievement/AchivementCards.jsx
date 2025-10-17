@@ -1,25 +1,31 @@
 import { achievements } from "../../../public/data/achievements";
 import { BsCalendarDate } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const AchivementCards = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-8 md:gap-4">
             {achievements.map((achievement) => (
-                <div key={achievement.id} className="max-w-80 shadow shadow-slate-300 lg:w-full achivement-card overflow-hidden rounded-md mx-auto">
-                    <div className="relative">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: achievement.id * 0.2 }}
+                    viewport={{ once: true }}
+                    key={achievement.id} className="max-w-96 lg:w-full  overflow-hidden rounded-md mx-auto ">
+                    <div className="relative overflow-hidden w-16  lg:w-24 mx-auto">
                         <img
                         src={achievement.image}
                         alt={achievement.title}
-                        className="h-72 w-full object-cover  CardImg"
+                        className="h-full w-full object-cover  "
                         />
-                        <div className="absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-emerald-500 to-transparent "></div>
+                        
                     </div>
-                    <div className="bg-orange-400/10 min-h-28 p-2 flex flex-col justify-center">
+                    <div className=" min-h-28 p-2 flex flex-col justify-center mx-auto text-center">
                         <h3 className="text-emerald-400 font-bold text-lg">{achievement.title}</h3>
-                        <p className="">{achievement.description}</p>
+                        <p className="text-sm">{achievement.description}</p>
                         <span className="text-sm mt-2"><BsCalendarDate className="inline-block mr-1 text-emerald-400"/> {achievement.year}</span>
                     </div>
-                </div>
+                </motion.div>
             ))}
         </div>
     );

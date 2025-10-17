@@ -1,6 +1,6 @@
-import scholarshipImage from "../scholarship.jpg";
-import runners_upImage from "../ruuners_up.jpg";
-import best_performerImage from "../best_performer.jpg";
+import scholarshipImage from "../scholarship.png";
+import runners_upImage from "../2nd-position-badge.png";
+import best_performerImage from "../goals.png";
 
 export const achievements = [
     {

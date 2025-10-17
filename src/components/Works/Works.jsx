@@ -74,7 +74,8 @@ const Works = () => {
 
 
                     <div className="lg:w-[85%] mx-auto mt-8 md:mt-12 lg:mt-16 flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-12">
-                        {extraCurriculars.map((activity, index) => {
+                        
+                        {extraCurriculars.map((activity) => {
                             const IconComponent = activity.icon;
                             return (
                                 <motion.div
@@ -82,10 +83,10 @@ const Works = () => {
                                 className="bg-blue-400/10 p-4 rounded-md mb-4 neon-glow flex-1"
                                 initial={{ opacity: 0, y: 10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                whileHover={{ scale: 1.03 ,rotate:-2}}
+                                    whileHover={{ scale: 1.03, rotate: -2 }}
+                                    viewport={{ once: true }}
                                 transition={{
-                                    duration: 0.3,
-                                    delay: index * 0.1,
+                                    duration: 0.3
                                 }}
                             >
                                 <h3 className="text-lg font-semibold text-emerald-400">

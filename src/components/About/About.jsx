@@ -180,6 +180,7 @@ function About() {
                     <motion.div
                         initial={{ opacity: 0, y: -20 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
                         className="flex-1 w-[80%] mx-auto relative bg-slate-200 pic-holder"
                     >
@@ -263,6 +264,7 @@ function About() {
                                     <motion.div
                                         initial={{ opacity: 0, y: 40 }}
                                         whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
                                         transition={{
                                             duration: 0.6,
                                             delay: 0.3,
@@ -285,11 +287,13 @@ function About() {
                                                     y: 0,
                                                 }}
                                                 whileHover={{ scale: 1.05 }}
+                                                viewport={{once:true}}
                                                 transition={{
                                                     duration: 0.6,
                                                     delay: education.id * 0.1,
                                                 }}
                                                 key={education.id}
+                                                
                                             >
                                                 <GlowCard
                                                     identifier={`education-${education.id}`}
@@ -379,6 +383,7 @@ function About() {
                                                 scale: 1.02,
                                                 transition: { duration: 0.4 },
                                             }}
+                                            viewport={{once:true}}
                                         >
                                             <div className="flex items-center gap-3 mb-6">
                                                 <div
@@ -416,9 +421,7 @@ function About() {
                                                                         techIndex *
                                                                             0.1,
                                                                 }}
-                                                                viewport={{
-                                                                    once: true,
-                                                                }}
+                                                                
                                                                 whileHover={{
                                                                     x: 5,
                                                                     backgroundColor:
