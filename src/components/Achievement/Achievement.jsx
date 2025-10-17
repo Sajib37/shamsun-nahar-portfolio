@@ -9,7 +9,7 @@ const Achievement = () => {
                     <h1 className="section-title text-xl md:text-3xl font-bold mb-2 text-slate-300">
                         <span className="text-emerald-400">#</span>Achievements
                     </h1>
-                    
+                    <div className="h-1 w-20 md:w-48 lg:w-64 bg-blue-400/50"></div>
                 </div>
 
                 <div className="lg:w-[85%] mx-auto mt-4 md:mt-8 lg:mt-10">

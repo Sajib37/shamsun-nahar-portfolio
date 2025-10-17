@@ -73,7 +73,7 @@ function Home() {
     }, [animationsEnabled]);
 
     return (
-        <section className="section-padding pt-32 pb-4">
+        <section className="section-padding pt-20 md:pt-32 pb-4">
             <div
                 className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
                 ref={contentRef}

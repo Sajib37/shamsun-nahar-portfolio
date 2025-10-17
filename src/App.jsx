@@ -18,8 +18,6 @@ import Projects from './components/Projects/Projects'
 const About = lazy(() => import('./components/About/About'))
 const Works = lazy(() => import('./components/Works/Works'))
 const Achievement = lazy(() => import('./components/Achievement/Achievement'))
-const Resume = lazy(() => import('./components/Resume/Resume'))
-const TechStack = lazy(() => import('./components/TechStack/TechStack'))
 const Contact = lazy(() => import('./components/Contact/Contact'))
 
 function App() {
@@ -38,7 +36,7 @@ function App() {
     const mobile = checkMobile();
     
     // Ultra-fast loading for mobile devices
-    const loadTime = mobile ? 150 : 500; // Extremely fast on mobile
+    const loadTime = mobile ? 200 : 300;
     
     const timer = setTimeout(() => {
       setLoading(false);
@@ -125,26 +123,13 @@ function App() {
                           </Suspense>
                         </MobileSafeSection>
 
-                        {/* Tech Stack section */}
-                        {/* <MobileSafeSection id="tech-stack" fallback={<FastFallback message="Loading tech stack..." />}>
-                          <Suspense fallback={<FastFallback message="Loading tech stack..." />}>
-                            <TechStack />
-                          </Suspense>
-                        </MobileSafeSection> */}
-
-                        {/* Resume section */}
-                        {/* <MobileSafeSection id="resume" fallback={<FastFallback message="Loading resume..." />}>
-                          <Suspense fallback={<FastFallback message="Loading resume..." />}>
-                            <Resume />
-                          </Suspense>
-                        </MobileSafeSection> */}
 
                         {/* Contact section */}
-                        {/* <MobileSafeSection id="contact" fallback={<FastFallback message="Loading contact..." />}>
+                        <MobileSafeSection id="contact" fallback={<FastFallback message="Loading contact..." />}>
                           <Suspense fallback={<FastFallback message="Loading contact..." />}>
                             <Contact />
                           </Suspense>
-                        </MobileSafeSection> */}
+                        </MobileSafeSection>
                       </>
                     } />
                   </Routes>

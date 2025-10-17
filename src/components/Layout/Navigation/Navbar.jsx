@@ -28,7 +28,6 @@ function Navbar() {
         setScrolled(false);
       }
 
-      // Determine active section based on scroll position
       const sections = [
         "home",
         "about",
@@ -50,14 +49,13 @@ function Navbar() {
       }
     };
 
-    // Close mobile menu on escape key press
+
     const handleKeyPress = (e) => {
       if (e.key === 'Escape' && isOpen) {
         setIsOpen(false);
       }
     };
 
-    // Close mobile menu on resize (when switching to desktop)
     const handleResize = () => {
       if (window.innerWidth >= 768 && isOpen) {
         setIsOpen(false);
@@ -68,7 +66,6 @@ function Navbar() {
     window.addEventListener("keydown", handleKeyPress);
     window.addEventListener("resize", handleResize);
     
-    // Prevent body scroll when mobile menu is open
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -79,7 +76,7 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("keydown", handleKeyPress);
       window.removeEventListener("resize", handleResize);
-      document.body.style.overflow = 'unset'; // Cleanup on unmount
+      document.body.style.overflow = 'unset'; 
     };
   }, [isOpen]);
 
@@ -87,16 +84,13 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  // Close mobile navbar when clicking a link
   const closeNavbar = () => {
     if (isOpen) setIsOpen(false);
   };
 
-  // Enhanced mobile navigation handler
   const handleMobileNavClick = (sectionId) => {
-    setIsOpen(false); // Close menu immediately for better UX
+    setIsOpen(false); 
 
-    // Small delay to allow menu close animation before scrolling
     setTimeout(() => {
       if (location.pathname !== "/") {
         navigate("/");
@@ -123,12 +117,11 @@ function Navbar() {
     }, 150);
   };
 
-  // Navigate to home page and scroll to section
   const scrollToSection = (sectionId) => {
-    // If we're not on the home page, navigate to home first
+
     if (location.pathname !== "/") {
       navigate("/");
-      // Wait for navigation to complete, then scroll
+
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -165,7 +158,7 @@ function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-14 md:h-20">
           <div className="flex-shrink-0">
             <motion.button
               onClick={() => scrollToSection("home")}
@@ -173,14 +166,14 @@ function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-12 h-12 rounded-b-lg flex items-center justify-center">
+              <div className="w-9 h-9 md:w-12 md:h-12 rounded-b-lg flex items-center justify-center">
                 <img 
                   src="/logo.png" 
-                  alt="GiaSi Dev Logo" 
+                  alt="Shamsun Nahar Logo" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold gradient-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700">
+              <span className="text-lg md:text-xl font-bold gradient-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700">
                 SN Analytics
               </span>
             </motion.button>
@@ -226,7 +219,7 @@ function Navbar() {
             <motion.button
               onClick={toggleNavbar}
               type="button"
-              className="relative inline-flex items-center justify-center p-3 rounded-xl bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 text-slate-300 hover:text-blue-400 hover:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all duration-300"
+              className="relative inline-flex items-center justify-center p-2 rounded-xl bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 text-slate-300 hover:text-blue-400 hover:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/30 transition-all duration-300"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
               whileHover={{ scale: 1.05 }}
@@ -238,9 +231,9 @@ function Navbar() {
                 transition={{ duration: 0.3 }}
               >
                 {isOpen ? (
-                  <FaTimes className="h-5 w-5" />
+                  <FaTimes className="h-4 w-4" />
                 ) : (
-                  <FaBars className="h-5 w-5" />
+                  <FaBars className="h-4 w-4" />
                 )}
               </motion.div>
             </motion.button>
