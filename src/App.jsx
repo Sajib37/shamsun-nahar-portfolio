@@ -12,7 +12,6 @@ import MobileSafeSection from './components/Layout/Mobile/MobileSafeSection'
 
 // Only Home loaded immediately for faster initial render
 import Home from './components/Home/Home'
-import Projects from './components/Projects/Projects'
 
 // Lazy load everything else
 const About = lazy(() => import('./components/About/About'))

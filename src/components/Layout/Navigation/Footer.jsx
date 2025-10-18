@@ -79,7 +79,7 @@ const Footer = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 md:py-10 relative z-10">
+            <div className="max-w-7xl mx-auto px-8 lg:px-8 py-8 md:py-10 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-12">
                     {/* Brand Section */}
                     <motion.div

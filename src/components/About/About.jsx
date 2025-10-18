@@ -4,6 +4,7 @@ import lottiFile from "../../../public/education-lottie.json";
 import GlowCard from "../helper/GlowCard";
 import AnimationLottie from "../helper/AnimationLottie";
 import { IoSchoolSharp } from "react-icons/io5";
+import profile from "../../../public/profile3.png";
 import {
     FaFileWord,
     FaFilePowerpoint,
@@ -25,9 +26,9 @@ function About() {
             title: "Technical",
             icon: FaChartLine,
             color: "text-orange-400",
-            bgColor: "bg-orange-500/10",
-            hover: "hover:bg-orange-500/15",
-            borderColor: "border-orange-500/20",
+            bgColor: "bg-violet-500/15",
+            hover: "hover:bg-violet-500/20",
+            borderColor: "border-violet-500/20",
             technologies: [
                 {
                     name: "MS Word",
@@ -66,8 +67,8 @@ function About() {
             title: "Professional",
             icon: FaUsers,
             color: "text-blue-400",
-            bgColor: "bg-blue-500/10",
-            hover: "hover:bg-blue-500/15",
+            bgColor: "bg-blue-500/15",
+            hover: "hover:bg-blue-500/20",
             borderColor: "border-blue-500/20",
             technologies: [
                 {
@@ -125,8 +126,8 @@ function About() {
             title: "Analytical",
             icon: FaChartLine,
             color: "text-green-400",
-            bgColor: "bg-green-500/10",
-            hover: "hover:bg-green-500/15",
+            bgColor: "bg-green-500/15",
+            hover: "hover:bg-green-500/20",
             borderColor: "border-green-500/20",
             technologies: [
                 {
@@ -177,21 +178,13 @@ function About() {
                 </div>
 
                 <section className="lg:w-[85%] mx-auto mt-6 md:mt-8 lg:mt-10 flex-col lg:flex-row-reverse flex gap-8 md:gap-12 lg:gap-20 items-start">
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.7 }}
-                        className="flex-1 w-[80%] mx-auto relative bg-slate-200 pic-holder"
-                    >
-                        <img
-                            src="/profile3.png"
-                            alt="Profile"
-                            className="object-cover w-full h-full mx-auto "
-                        />
+                    
+                    <div className="wrapper">
+                    <div className="box p-4 lg:w-96 md:w-72 w-64 flex items-center justify-center">
+                        <img className='w-full' src={profile} alt="" />
+                    </div>
+                </div>
 
-                        <div className="absolute top-0 w-full h-full -z-10 border-4 border-emerald-400 translate-x-3 translate-y-3 pic-effect"></div>
-                    </motion.div>
                     <div className="flex-1 lg:flex-2 space-y-3 lg:space-y-4 ">
                         <motion.p
                             initial={{ opacity: 0, y: -20 }}
@@ -200,12 +193,18 @@ function About() {
                             className="  text-slate-300 md:text-lg"
                         >
                             I’m a passionate learner who believes in dreaming
-                            big and turning those <span className="text-emerald-400 font-semibold">dreams into action</span>. I
-                            completed my BBA in Management and MBA in Strategic
-                            and International Management from the <span className="text-emerald-400 font-semibold">University of
-                            Dhaka</span>, one of Bangladesh’s top-ranked universities,
-                            where the Department of Management is globally
-                            recognized in the QS World Rankings (351–400 range).
+                            big and turning those{" "}
+                            <span className="text-emerald-400 font-semibold">
+                                dreams into action
+                            </span>
+                            . I completed my BBA in Management and MBA in
+                            Strategic and International Management from the{" "}
+                            <span className="text-emerald-400 font-semibold">
+                                University of Dhaka
+                            </span>
+                            , one of Bangladesh’s top-ranked universities, where
+                            the Department of Management is globally recognized
+                            in the QS World Rankings (351–400 range).
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: -20 }}
@@ -214,11 +213,17 @@ function About() {
                             className="  text-slate-300  md:text-lg"
                         >
                             Currently, I’m pursuing my Master’s in Management
-                            Information Systems at <span className="text-emerald-400 font-semibold">Lamar University, USA</span>,
-                            with a scholarship. My transition from business to
+                            Information Systems at{" "}
+                            <span className="text-emerald-400 font-semibold">
+                                Lamar University, USA
+                            </span>
+                            , with a scholarship. My transition from business to
                             technology reflects my belief that the future
-                            belongs to those who can connect <span className="text-emerald-400 font-semibold">ideas, data, and
-                            people</span>.
+                            belongs to those who can connect{" "}
+                            <span className="text-emerald-400 font-semibold">
+                                ideas, data, and people
+                            </span>
+                            .
                         </motion.p>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -229,8 +234,11 @@ function About() {
                             Through my experience as an HR Intern at Panjeree
                             Publications Limited and leadership roles in DU
                             Writers’ Hub and Youth for Change BD, I’ve developed
-                            strong <span className="text-emerald-400 font-semibold">analytical, communication, and teamwork
-                            skills</span>. I aspire to grow as a skilled and empathetic
+                            strong{" "}
+                            <span className="text-emerald-400 font-semibold">
+                                analytical, communication, and teamwork skills
+                            </span>
+                            . I aspire to grow as a skilled and empathetic
                             professional who not only achieves success but helps
                             others move forward.
                         </motion.p>
@@ -250,7 +258,6 @@ function About() {
 
                         <div className="flex  ">
                             <div className="flex  items-center mt-8 md:mt-10 lg:mt-10">
-                                
                                 <span className="bg-[#231a5e] w-fit text-white p-2   md:text-2xl rounded-md">
                                     My Learning Path
                                 </span>
@@ -278,7 +285,7 @@ function About() {
                                 </div>
 
                                 <div>
-                                    <div className="flex flex-col gap-6 md:px-10">
+                                    <div className="flex flex-col gap-6 px-4 md:px-10">
                                         {educations.map((education) => (
                                             <motion.div
                                                 initial={{ opacity: 0, y: 40 }}
@@ -287,13 +294,12 @@ function About() {
                                                     y: 0,
                                                 }}
                                                 whileHover={{ scale: 1.05 }}
-                                                viewport={{once:true}}
+                                                viewport={{ once: true }}
                                                 transition={{
                                                     duration: 0.6,
                                                     delay: education.id * 0.1,
                                                 }}
                                                 key={education.id}
-                                                
                                             >
                                                 <GlowCard
                                                     identifier={`education-${education.id}`}
@@ -305,25 +311,26 @@ function About() {
                                                             className="absolute w-full h-1/2 bottom-0"
                                                         />
                                                         <div className="absolute top-[50%] -translate-y-[50%] left-0 -translate-x-[50%] w-3 h-3 rounded-full bg-violet-400"></div>
-                                                        <div className="flex justify-center">
-                                                            <p className="text-xs sm:text-sm text-[#16f2b3]">
-                                                                {
-                                                                    education.duration
-                                                                }
-                                                            </p>
-                                                        </div>
-                                                        <div className="flex items-center gap-x-8 px-3 py-3">
+
+                                                        <div className="flex flex-col lg:flex-row items-center gap-4 px-3 py-3">
                                                             <div className="text-violet-500  transition-all duration-300 hover:scale-125">
-                                                                <IoSchoolSharp
-                                                                    size={36}
-                                                                />
+                                                                <IoSchoolSharp className="text-3xl md:text-4xl" />
                                                             </div>
                                                             <div>
-                                                                <p className="text-sm sm:text-xl mb-2 font-medium uppercase">
+                                                                <p className="text-sm sm:text-xl  font-medium uppercase">
                                                                     {
                                                                         education.title
                                                                     }
                                                                 </p>
+                                                                <div className="flex">
+                                                                    <p className="text-xs sm:text-sm text-slate-400 mr-4 mb-2">
+                                                                        (
+                                                                        {
+                                                                            education.duration
+                                                                        }
+                                                                        )
+                                                                    </p>
+                                                                </div>
                                                                 <p className="text-sm sm:text-base">
                                                                     {
                                                                         education.institution
@@ -344,7 +351,7 @@ function About() {
 
                 {/* Skills section */}
                 <section className="relative">
-                    <div  className="relative   ">
+                    <div className="relative   ">
                         <div className="absolute w-full h-1/2 bottom-0 -z-10 opacity-20">
                             <img
                                 src="/blur-23.svg"
@@ -355,7 +362,6 @@ function About() {
 
                         <div className="flex  ">
                             <div className="flex  items-center mt-12 md:mt-14 lg:mt-16">
-                                
                                 <span className="bg-[#231a5e] w-fit text-white p-2   md:text-2xl rounded-md">
                                     Skillset Overview
                                 </span>
@@ -373,7 +379,7 @@ function About() {
                                         className="flex justify-center items-center flex-1 w-full"
                                     >
                                         <motion.div
-                                            className={`glass-effect ${category.hover} rounded-2xl p-6 border ${category.borderColor} ${category.bgColor}  lg:min-h-[450px] w-full self-start`}
+                                            className={`glass-effect ${category.hover} rounded-2xl p-6 border ${category.borderColor} ${category.bgColor} backdrop-blur-lg lg:min-h-[450px] w-full self-start`}
                                             initial={{ opacity: 0, y: 30 }}
                                             whileInView={{ opacity: 1, y: 0 }}
                                             transition={{
@@ -383,7 +389,7 @@ function About() {
                                                 scale: 1.02,
                                                 transition: { duration: 0.4 },
                                             }}
-                                            viewport={{once:true}}
+                                            viewport={{ once: true }}
                                         >
                                             <div className="flex items-center gap-3 mb-6">
                                                 <div
@@ -406,7 +412,7 @@ function About() {
                                                         return (
                                                             <motion.div
                                                                 key={techIndex}
-                                                                className="flex items-center justify-between p-3 bg-slate-800/30 rounded-lg border border-slate-700/30"
+                                                                className="flex items-center justify-between p-3 bg-slate-800/60 rounded-lg border border-slate-700/30"
                                                                 initial={{
                                                                     opacity: 0,
                                                                     x: -20,
@@ -421,7 +427,6 @@ function About() {
                                                                         techIndex *
                                                                             0.1,
                                                                 }}
-                                                                
                                                                 whileHover={{
                                                                     x: 5,
                                                                     backgroundColor:

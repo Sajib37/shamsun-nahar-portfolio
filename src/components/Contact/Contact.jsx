@@ -140,7 +140,7 @@ const Contact = () => {
                                             value={formData.name}
                                             onChange={handleInputChange}
                                             className="w-full p-2 md:p-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
-                                            placeholder="Shamsun Nahar Saba"
+                                            placeholder="Shamsun Nahar"
                                             required
                                         />
                                     </div>

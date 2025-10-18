@@ -366,8 +366,14 @@ body {
 
 
 
-.pic-holder:hover .pic-effect {
-  transform: translate(6px, 6px);
-  transition: transform 0.9s ease;
-}
-
+  .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box{
+    background-color: hsl(300, 76%, 72%,0.4);
+    box-shadow: 0 2px 20px 2px hsl(300, 76%, 72%,0.6);
+    animation: animate 6s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+  }
