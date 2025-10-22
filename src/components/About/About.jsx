@@ -179,11 +179,10 @@ function About() {
 
                 <section className="lg:w-[85%] mx-auto mt-6 md:mt-8 lg:mt-10 flex-col lg:flex-row-reverse flex gap-8 md:gap-12 lg:gap-20 items-start">
                     
-                    <div className="wrapper">
-                    <div className="box p-4 lg:w-96 md:w-72 w-64 flex items-center justify-center">
-                        <img className='w-full' src={profile} alt="" />
+
+                    <div className=" gradient-border mx-auto rounded-4xl lg:w-96 md:w-72 w-64 flex items-center justify-center">
+                        <img className='w-full rounded-full mx-auto' src={profile} alt="" />
                     </div>
-                </div>
 
                     <div className="flex-1 lg:flex-2 space-y-3 lg:space-y-4 ">
                         <motion.p

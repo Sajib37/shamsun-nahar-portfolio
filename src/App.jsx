@@ -35,7 +35,7 @@ function App() {
     const mobile = checkMobile();
     
     // Ultra-fast loading for mobile devices
-    const loadTime = mobile ? 200 : 300;
+    const loadTime = mobile ? 200 : 1000;
     
     const timer = setTimeout(() => {
       setLoading(false);

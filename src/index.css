@@ -54,25 +54,6 @@ body {
     }
 }
 
-.bg-light-gradient {
-    background: linear-gradient(
-        135deg,
-        rgb(var(--background-start-rgb)) 0%,
-        rgb(var(--background-end-rgb)) 100%
-    );
-}
-
-/* Beautiful three.js background container */
-.threejs-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    opacity: 0.1;
-}
 
 @layer base {
     body {
@@ -412,14 +393,8 @@ body {
     mask-composite: intersect;
 }
 
-.wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.box {
-    background-color: hsl(300, 76%, 72%, 0.4);
-    box-shadow: 0 2px 20px 2px hsl(300, 76%, 72%, 0.6);
-    animation: animate 6s ease-in-out infinite;
-    transition: all 1s ease-in-out;
+.gradient-border {
+  border: 4px solid;
+  border-image: linear-gradient(45deg, #7C3AED, #3b82f6,#059669) 1;
+  padding: 12px;
 }
