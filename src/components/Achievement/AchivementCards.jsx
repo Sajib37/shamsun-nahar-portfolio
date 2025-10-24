@@ -10,7 +10,6 @@ const AchivementCards = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: achievement.id * 0.2 }}
-                    viewport={{ once: true }}
                     key={achievement.id} className="max-w-96 lg:w-full  overflow-hidden rounded-md mx-auto ">
                     <div className="relative overflow-hidden w-16  lg:w-24 mx-auto">
                         <img

@@ -95,7 +95,7 @@ const Contact = () => {
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8"
+                    className="w-48 flex justify-center items-center  mx-auto gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-10 md:mb-14 lg:mb-16"
                 >
                     <FaRocket className="w-4 h-4 text-blue-400" />
                     <span className="text-sm font-medium text-gray-300">

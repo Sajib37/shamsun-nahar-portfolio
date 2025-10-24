@@ -182,7 +182,7 @@ function Home() {
                             <div className="relative">
                                 {/* Main glowing orb */}
                                 <div
-                                    className={`w-80 h-80 bg-gradient-to-br from-blue-500/30 via-violet-500/20 to-cyan-500/30 rounded-full blur-2xl neon-glow ${
+                                    className={`w-80 h-80 bg-gradient-to-br from-blue-500/40 via-violet-500/30 to-cyan-500/50 rounded-full blur-2xl neon-glow ${
                                         !isMobile ? "animate-pulse-slow" : ""
                                     }`}
                                 ></div>
@@ -191,28 +191,28 @@ function Home() {
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="relative w-64 h-64">
                                         <div
-                                            className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-16 border-2 border-blue-400/60 rounded-lg rotate-45 ${
+                                            className={`absolute top-0 left-1/2 transform -translate-x-1/2 w-16 h-16 border-2 border-blue-400/70 rounded-lg rotate-45 ${
                                                 !isMobile
                                                     ? "animate-bounce-slow"
                                                     : ""
                                             }`}
                                         ></div>
                                         <div
-                                            className={`absolute bottom-0 right-0 w-12 h-12 bg-gradient-to-br from-violet-500/40 to-cyan-500/40 rounded-full ${
+                                            className={`absolute bottom-0 right-0 w-12 h-12 bg-gradient-to-br from-violet-500/50 to-cyan-500/50 rounded-full ${
                                                 !isMobile
                                                     ? "animate-pulse delay-500"
                                                     : ""
                                             }`}
                                         ></div>
                                         <div
-                                            className={`absolute top-1/4 left-0 w-8 h-8 border border-cyan-400/60 rotate-12 ${
+                                            className={`absolute top-1/4 left-0 w-8 h-8 border border-cyan-400/70 rotate-12 ${
                                                 !isMobile
                                                     ? "animate-pulse delay-1000"
                                                     : ""
                                             }`}
                                         ></div>
                                         <div
-                                            className={`absolute bottom-1/4 left-1/4 w-6 h-16 bg-gradient-to-t from-blue-500/30 to-transparent rounded-full ${
+                                            className={`absolute bottom-1/4 left-1/4 w-6 h-16 bg-gradient-to-t from-blue-500/40 to-transparent rounded-full ${
                                                 !isMobile
                                                     ? "animate-bounce-slow delay-700"
                                                     : ""
@@ -224,9 +224,9 @@ function Home() {
                                 {/* Orbiting rings - only on desktop */}
                                 {!isMobile && (
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-96 h-96 border border-blue-400/20 rounded-full animate-[spin_15s_linear_infinite]"></div>
-                                        <div className="absolute w-80 h-80 border border-violet-400/20 rounded-full animate-[spin_20s_linear_infinite_reverse]"></div>
-                                        <div className="absolute w-64 h-64 border border-cyan-400/20 rounded-full animate-[spin_25s_linear_infinite]"></div>
+                                        <div className="w-96 h-96 border border-blue-400/30 rounded-full animate-[spin_15s_linear_infinite]"></div>
+                                        <div className="absolute w-80 h-80 border border-violet-400/30 rounded-full animate-[spin_20s_linear_infinite_reverse]"></div>
+                                        <div className="absolute w-64 h-64 border border-cyan-400/30 rounded-full animate-[spin_25s_linear_infinite]"></div>
                                     </div>
                                 )}
                             </div>

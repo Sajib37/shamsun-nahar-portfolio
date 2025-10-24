@@ -87,7 +87,6 @@ const Footer = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
                     >
                         <div className="flex items-center gap-3 mb-4 md:mb-6">
                             <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-violet-500 rounded-xl flex items-center justify-center font-bold text-white">
@@ -133,7 +132,6 @@ const Footer = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        viewport={{ once: true }}
                     >
                         <h4 className="text-lg font-semibold text-slate-100 mb-4 md:mb-6">
                             Quick Links
@@ -161,7 +159,6 @@ const Footer = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true }}
                     >
                         <h4 className="text-lg font-semibold text-slate-100 mb-4 md:mb-6">
                             Get In Touch
@@ -204,7 +201,6 @@ const Footer = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    viewport={{ once: true }}
                 >
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-slate-400 text-sm flex items-center gap-2">

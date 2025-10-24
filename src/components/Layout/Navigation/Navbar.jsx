@@ -149,8 +149,8 @@ function Navbar() {
     <motion.nav
       className={`fixed w-full z-30 transition-all duration-500 ${
         scrolled
-          ? "glass-effect shadow-xl border-b border-slate-700/50 backdrop-blur-xl"
-          : "bg-transparent"
+          ? "glass-effect shadow-xl border-b border-blue-950 backdrop-blur-xl"
+          : "bg-transparent border-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
