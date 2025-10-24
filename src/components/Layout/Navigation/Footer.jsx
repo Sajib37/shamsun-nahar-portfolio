@@ -22,7 +22,7 @@ const Footer = () => {
         {
             name: "Facebook",
             icon: FaFacebook,
-            url: "#",
+            url: "https://www.facebook.com/shamsun.nahar.344631",
             color: "hover:text-gray-400",
         },
         {
@@ -65,8 +65,8 @@ const Footer = () => {
         },
         {
             icon: FaMapMarkerAlt,
-            text: "1135 Alabama Ave, Apt 31, Beaumont, TX 77705",
-            href: "https://maps.app.goo.gl/ZLn3fsRiW8gABJb86",
+            text: "Beaumont, Texas, United States",
+            href: "https://maps.app.goo.gl/ZXbAJZHJE1tf5NWG7",
         },
     ];
 

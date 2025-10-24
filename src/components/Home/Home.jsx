@@ -144,7 +144,7 @@ function Home() {
 
                         <div className="flex items-center gap-2">
                             <a
-                                href="#"
+                                href="https://www.facebook.com/shamsun.nahar.344631"
                                 target="_blank"
                                 rel="noreferrer"
                                 className={`glass-effect text-slate-300 hover:text-blue-400 transition-all p-2 rounded-xl ${
