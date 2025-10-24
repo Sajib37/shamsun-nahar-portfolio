@@ -26,9 +26,9 @@ function About() {
       title: "Technical",
       icon: FaChartLine,
       color: "text-orange-400",
-      bgColor: "bg-violet-500/15",
-      hover: "hover:bg-violet-500/20",
-      borderColor: "border-violet-500/20",
+      bgColor: "bg-violet-500/25",
+      hover: "hover:bg-violet-500/30",
+      borderColor: "border-violet-500/30",
       technologies: [
         {
           name: "MS Word",
@@ -67,9 +67,9 @@ function About() {
       title: "Professional",
       icon: FaUsers,
       color: "text-blue-400",
-      bgColor: "bg-blue-500/15",
-      hover: "hover:bg-blue-500/20",
-      borderColor: "border-blue-500/20",
+      bgColor: "bg-blue-500/25",
+      hover: "hover:bg-blue-500/30",
+      borderColor: "border-blue-500/30",
       technologies: [
         {
           name: "Communication",
@@ -126,9 +126,9 @@ function About() {
       title: "Analytical",
       icon: FaChartLine,
       color: "text-green-400",
-      bgColor: "bg-green-500/15",
-      hover: "hover:bg-green-500/20",
-      borderColor: "border-green-500/20",
+      bgColor: "bg-green-500/25",
+      hover: "hover:bg-green-500/30",
+      borderColor: "border-green-500/30",
       technologies: [
         {
           name: "Research",
@@ -254,11 +254,11 @@ function About() {
 
             <div className="flex  justify-center">
               <div className="flex  items-center justify-center mt-14 md:mt-16 lg:mt-20">
-                <span className="w-16 md:w-32 h-[2px] bg-[#231a5e]"></span>
-                <span className="bg-[#231a5e] w-fit text-white p-2   md:text-2xl rounded-md">
+                <span className="w-16 md:w-32 h-[2px] bg-[#8228ec]"></span>
+                <span className="bg-[#8228ec] w-fit text-white p-2   md:text-2xl rounded-md">
                   My Learning Path
                 </span>
-                <span className="w-16 md:w-32 h-[2px] bg-[#231a5e]"></span>
+                <span className="w-16 md:w-32 h-[2px] bg-[#8228ec]"></span>
               </div>
             </div>
 
@@ -308,15 +308,14 @@ function About() {
                                 <IoSchoolSharp className="text-3xl md:text-4xl" />
                               </div>
                               <div>
-                                <p className="text-sm sm:text-xl  font-medium uppercase">
+                                <p className="text-sm sm:text-xl  font-medium uppercase text-center md:text-start">
                                   {education.title}
                                 </p>
-                                <div className="flex">
-                                  <p className="text-xs sm:text-sm text-slate-400 mr-4 mb-2">
+
+                                  <p className="text-xs sm:text-sm text-slate-200 mr-4 mb-2 text-center md:text-start">
                                     ({education.duration})
                                   </p>
-                                </div>
-                                <p className="text-sm sm:text-base">
+                                <p className="text-sm sm:text-base text-center md:text-start">
                                   {education.institution}
                                 </p>
                               </div>
@@ -345,11 +344,11 @@ function About() {
 
             <div className="flex  justify-center">
               <div className="flex  items-center justify-center mt-16 md:mt-16 lg:mt-20">
-                <span className="w-16 md:w-32 h-[2px] bg-[#231a5e]"></span>
-                <span className="bg-[#231a5e] w-fit text-white p-2   md:text-2xl rounded-md">
+                <span className="w-16 md:w-32 h-[2px] bg-[#8228ec]"></span>
+                <span className="bg-[#8228ec] w-fit text-white p-2   md:text-2xl rounded-md">
                   Skillset Overview
                 </span>
-                <span className="w-16 md:w-32 h-[2px] bg-[#231a5e]"></span>
+                <span className="w-16 md:w-32 h-[2px] bg-[#8228ec]"></span>
               </div>
             </div>
 
@@ -393,7 +392,7 @@ function About() {
                           return (
                             <motion.div
                               key={techIndex}
-                              className="flex items-center justify-between p-3 bg-slate-800/60 rounded-lg border border-slate-700/30"
+                              className="flex items-center justify-between p-3 bg-slate-900/80 rounded-lg border border-slate-800/80"
                               initial={{
                                 opacity: 0,
                                 x: -20,
@@ -417,7 +416,7 @@ function About() {
                                     color: tech.color,
                                   }}
                                 />
-                                <span className="font-medium text-slate-200">
+                                <span className="font-medium text-slate-100">
                                   {tech.name}
                                 </span>
                               </div>

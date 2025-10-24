@@ -64,11 +64,11 @@ const Works = () => {
         <section className="lg:w-[85%] mx-auto mt-12 md:mt-16 lg:mt-24">
           <div className="flex  justify-center">
               <div className="flex  items-center justify-center mt-10 md:mt-12 lg:mt-16">
-                <span className="w-12 md:w-32 h-[2px] bg-[#231a5e]"></span>
-                <span className="bg-[#231a5e] w-fit text-white p-2   md:text-2xl rounded-md">
+                <span className="w-12 md:w-32 h-[2px] bg-[#8228ec]"></span>
+                <span className="bg-[#8228ec] w-fit text-white p-2   md:text-2xl rounded-md">
                   Leadership & Activities
                 </span>
-                <span className="w-12 md:w-32 h-[2px] bg-[#231a5e]"></span>
+                <span className="w-12 md:w-32 h-[2px] bg-[#8228ec]"></span>
               </div>
             </div>
 

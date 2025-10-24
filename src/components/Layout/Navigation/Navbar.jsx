@@ -27,13 +27,7 @@ function Navbar() {
         setScrolled(false);
       }
 
-      const sections = [
-        "home",
-        "about",
-        "works",
-        "achievements",
-        "contact",
-      ];
+      const sections = ["home", "about", "works", "achievements", "contact"];
       const sectionElements = sections.map((id) => document.getElementById(id));
 
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -48,9 +42,8 @@ function Navbar() {
       }
     };
 
-
     const handleKeyPress = (e) => {
-      if (e.key === 'Escape' && isOpen) {
+      if (e.key === "Escape" && isOpen) {
         setIsOpen(false);
       }
     };
@@ -64,18 +57,18 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("keydown", handleKeyPress);
     window.addEventListener("resize", handleResize);
-    
+
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("keydown", handleKeyPress);
       window.removeEventListener("resize", handleResize);
-      document.body.style.overflow = 'unset'; 
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
@@ -88,7 +81,7 @@ function Navbar() {
   };
 
   const handleMobileNavClick = (sectionId) => {
-    setIsOpen(false); 
+    setIsOpen(false);
 
     setTimeout(() => {
       if (location.pathname !== "/") {
@@ -117,7 +110,6 @@ function Navbar() {
   };
 
   const scrollToSection = (sectionId) => {
-
     if (location.pathname !== "/") {
       navigate("/");
 
@@ -166,15 +158,13 @@ function Navbar() {
               whileTap={{ scale: 0.95 }}
             >
               <div className="w-9 h-9 md:w-12 md:h-12 rounded-b-lg flex items-center justify-center">
-                <img 
-                  src="/logo.png" 
-                  alt="Shamsun Nahar Logo" 
+                <img
+                  src="/logo.png"
+                  alt="Shamsun Nahar Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-lg md:text-xl font-bold gradient-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700">
-                SN Analytics
-              </span>
+              <span className="text-lg md:text-xl font-bold gradient-text text-transparent bg-gradient-to-r from-blue-600 to-purple-700"></span>
             </motion.button>
           </div>
 
@@ -214,7 +204,6 @@ function Navbar() {
 
           {/* Mobile menu button with improved styling */}
           <div className="md:hidden flex items-center gap-3">
-
             <motion.button
               onClick={toggleNavbar}
               type="button"
@@ -224,7 +213,9 @@ function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="sr-only">{isOpen ? 'Close menu' : 'Open menu'}</span>
+              <span className="sr-only">
+                {isOpen ? "Close menu" : "Open menu"}
+              </span>
               <motion.div
                 animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
@@ -243,7 +234,7 @@ function Navbar() {
       {/* Enhanced Mobile Menu Overlay */}
       <motion.div
         className={`fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-40 md:hidden ${
-          isOpen ? 'pointer-events-auto' : 'pointer-events-none'
+          isOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
         initial={{ opacity: 0 }}
         animate={{ opacity: isOpen ? 1 : 0 }}
@@ -255,16 +246,16 @@ function Navbar() {
       <motion.div
         className={`fixed right-4 top-20 w-80 max-w-[calc(100vw-2rem)] bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl shadow-2xl shadow-black/50 z-50 md:hidden overflow-hidden`}
         initial={{ opacity: 0, scale: 0.95, x: 20, y: -20 }}
-        animate={{ 
+        animate={{
           opacity: isOpen ? 1 : 0,
           scale: isOpen ? 1 : 0.95,
           x: isOpen ? 0 : 20,
           y: isOpen ? 0 : -20,
-          pointerEvents: isOpen ? 'auto' : 'none'
+          pointerEvents: isOpen ? "auto" : "none",
         }}
-        transition={{ 
+        transition={{
           duration: 0.3,
-          ease: [0.25, 0.1, 0.25, 1]
+          ease: [0.25, 0.1, 0.25, 1],
         }}
         id="mobile-menu"
       >
@@ -272,9 +263,9 @@ function Navbar() {
         <div className="px-6 py-4 border-b border-slate-700/50 bg-slate-800/30">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-violet-500 rounded-lg flex items-center justify-center">
-              <img 
-                src="/logo.png" 
-                alt="Logo" 
+              <img
+                src="/logo.png"
+                alt="Logo"
                 className="w-full h-full object-contain"
               />
             </div>
@@ -323,7 +314,6 @@ function Navbar() {
             active={activeSection === "contact"}
           />
         </div>
-
       </motion.div>
     </motion.nav>
   );
@@ -338,7 +328,7 @@ function NavLink({ label, active, onClick }) {
         active
           ? "text-blue-400 bg-blue-500/10"
           : "text-slate-300 hover:text-blue-400 hover:bg-slate-800/50"
-        }`}
+      }`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
@@ -385,9 +375,7 @@ function MobileNavLink({ icon, label, onClick, active }) {
       </motion.div>
 
       {/* Label */}
-      <span className="flex-1 text-left">
-        {label}
-      </span>
+      <span className="flex-1 text-left">{label}</span>
 
       {/* Active Indicator */}
       {active && (

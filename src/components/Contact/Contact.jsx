@@ -83,8 +83,8 @@ const Contact = () => {
         {
             icon: FaMapMarkerAlt,
             label: "Location",
-            value: "1135 Alabama Ave, Apt 31, Beaumont, TX 77705",
-            href: "https://maps.app.goo.gl/ZLn3fsRiW8gABJb86",
+            value: "Beaumont, Texas, United States",
+            href: "https://maps.app.goo.gl/ZXbAJZHJE1tf5NWG7",
             color: "text-purple-400",
         },
     ];
